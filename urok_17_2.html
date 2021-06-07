@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Practics</title>
+		<style>
+			html, body, body div, span, h1, h2, h3, h4, h5, h6, p, header, footer {
+						margin: 0;
+						padding: 0;
+						border: none;
+						outline: none;
+						background: none;
+			}
+			html, body {
+						height: 100%;
+			}
+			.wrapper {
+						display: flex;
+						flex-direction: column;
+						min-height: 100%;
+			}
+			header {
+						height: 100px;
+						background: #ddd;
+						flex: none;
+			}
+			footer {
+						height: 100px;
+						background: #ddd;
+						flex: none;
+			}
+			main {
+						flex: 1 0 auto;
+						display: flex;
+						align-items: stretch;
+			}
+			.gray{
+						background: gray;
+						flex: 1 0 auto;
+			}
+			.white{
+						background: red;
+						height: 100px;
+						flex: 3 0 auto;
+			}
+			.pink {
+						background: pink;
+						height: 1000px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header></header>
+			<main>
+				<div class="gray"></div>
+				<div class="white"></div>
+				<div class="pink"></div>
+			</main>
+			<footer></footer>
+		</div>
+	</body>
+</html>
