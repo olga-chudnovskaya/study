@@ -4,7 +4,8 @@
 		<meta charset="utf-8">
 		<title>Practics</title>
 		<style>
-			html, body, body div, span, h1, h2, h3, h4, h5, h6, p, header, footer {
+			/* global reset */
+			html, body, body div, span, h1, h2, h3, h4, h5, h6, p, header, footer, main {
 						margin: 0;
 						padding: 0;
 						border: none;
@@ -29,35 +30,43 @@
 						background: #ddd;
 						flex: none;
 			}
-			main {
+			.main {
 						flex: 1 0 auto;
+						background: yellow;
 						display: flex;
 						align-items: stretch;
 			}
-			.gray{
-						background: gray;
+			.grey {
+						background: grey;
 						flex: 1 0 auto;
 			}
-			.white{
-						background: red;
-						height: 100px;
+			.white {
+						background: white;
 						flex: 3 0 auto;
 			}
 			.pink {
 						background: pink;
-						height: 1000px;
+						height: 100px;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="wrapper">
-			<header></header>
-			<main>
-				<div class="gray"></div>
-				<div class="white"></div>
-				<div class="pink"></div>
-			</main>
-			<footer></footer>
-		</div>
-	</body>
+    <div class="wrapper">
+        <header></header>
+        <div class="main">
+            <div class="grey">
+                1<br>
+                2<br>
+                3<br>
+                4<br>
+                5<br>
+            </div>
+            <div class="white">
+                Vyshel zaytchick poguliyat
+            </div>
+        </div>
+        <div class="pink"></div>
+        <footer></footer>
+    </div>
+</body>
 </html>
