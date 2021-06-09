@@ -10,3 +10,23 @@ left: 102px;
 top: 22px;
 
 }
+
+h1 {
+position: absolute;
+width: 746px;
+height: 114px;
+left: 260px;
+top: 313px;
+
+font-family: BM HANNA_TTF;
+font-style: normal;
+font-weight: normal;
+font-size: 90px;
+line-height: 127%;
+/* or 114px */
+
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
