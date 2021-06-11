@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+
+    function searchNumber (min, max) {
+    
+    let randomNumber = Math.floor(Math.random() * (max- min + 1)) + min;
+     
+    /*function randomNumber() {
+    return Math.floor(Math.random() * 100) + 1;
+    }*/
+    /* начинаем действовать */
+    alert('Привет! Угадай число');
+
+    cycleStart: while( true ) {
+ 
+        let userNumber =  prompt(`Введите число от 1 до 100`);
+ 
+        if (+ userNumber) {
+ 
+            if (+ userNumber < randomNumber ) {
+                alert(`Больше`);
+            }
+            else if (+ userNumber > randomNumber) {
+                alert(`Меньше`);  
+            }
+            else if (+ userNumber == randomNumber)  {
+                alert(`Правильно!`);
+                
+                if(confirm(`Продолжить игру?`)) {
+                    searchNumber (1, 100)
+                }
+                else {
+                    alert('До свидания!');
+                    break;
+                    
+
+                }
+                
+            }
+ 
+        }
+        else if(+ userNumber == 0 && userNumber !== null) {
+ 
+            continue cycleStart;
+ 
+        }
+        else if(userNumber == null) {
+ 
+            break;
+            
+        }
+           
+    }
+ 
+}
+ 
+        searchNumber(1 , 10);
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

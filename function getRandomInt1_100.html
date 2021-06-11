@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Угадай число</title>
+<script>
+
+function getRandomInt1_100() {
+    return Math.floor(Math.random() * 100) + 1;
+    }
+    
+    function game(){
+
+         let getNumber = getRandomInt1_100;
+         
+        cycleStart: while( true ) {
+             let userNumber =  prompt(`Введите число от 0 до 100:`);
+                if (+ userNumber) {
+     
+                if (+ userNumber < getNumber) {
+                    alert(`Больше`);
+                }
+                else if (+ userNumber > getNumber) {
+                    alert(`Меньше`);  
+                }
+                else if (+ userNumber == getNumber)  {
+                    alert(`Правильно!`);
+                }   
+                else {
+                    break;
+                }
+                    
+                }
+     
+        }
+            else if(+ userNumber == 0 && userNumber !== null) {
+     
+                continue cycleStart;
+     
+            }
+            else if(userNumber == null) {
+     
+                break;
+     
+            }
+               
+    }
+
+
+        /* начинаем действовать */
+alert('Привет! Угадай число');
+let soglasie = confirm("Согласен?");
+if (soglasie) {
+do {
+game();
+soglasie = confirm("Сыграем еще раз?");
+} while (soglasie);
+}
+alert('До свидания!');
+
+</script>
+
+
+</head>
+<body></body>
+</html>    
