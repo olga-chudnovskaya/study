@@ -15,20 +15,21 @@
 * Приветствие и прощание делаем простым кодом.
 */
 
+/*
+// использование Math.round() даст неравномерное распределение!
+function getRandomInt1_100() {
+return Math.floor(Math.random() * 100) + 1;
+}
+
+*/
+
 let name = prompt('Как тебя зовут?',);//Выводит сообщение с запросом имени и полем ввода
 alert(`Привет, ${name}!`);//Выводит сообщение с именем
+
 alert( 'Отгадай число от 1 до 100' );//Выводит сообщение
 
-let randomNumber = Math.floor(Math.random() * 100) + 1;= 
+//let randomNumber = Math.floor(Math.random() * 100) + 1;= 
 
-
-
-
-// использование Math.round() даст неравномерное распределение!
-function getRandomInt(min, max)
-{
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 </script>
 </head>
 <body></body>

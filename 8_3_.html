@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
+
 
     function searchNumber (min, max) {
     
-    let randomNumber = Math.floor(Math.random() * (max- min + 1)) + min;
+    let randomNumber = Math.floor(Math.random() * max) + min;
      
-    /*function randomNumber() {
-    return Math.floor(Math.random() * 100) + 1;
-    }*/
     /* начинаем действовать */
     alert('Привет! Угадай число');
 
     cycleStart: while( true ) {
  
-        let userNumber =  prompt(`Введите число от ` + min + ` до ` + max);
+        let userNumber =  prompt(`Введите число от 1 до 100);
  
         if (+ userNumber) {
  
@@ -30,11 +30,12 @@
                 alert(`Правильно!`);
                 
                 if(confirm(`Продолжить игру?`)) {
-                    searchNumber (1, 10)
+                    searchNumber (1, 100)
                 }
                 else {
                     alert('До свидания!');
-                    break;                   
+                    break;
+                    
 
                 }
                 
@@ -42,7 +43,6 @@
  
         }
         else if(+ userNumber == 0 && userNumber !== null) {
-            alert (`Это не число!`)
  
             continue cycleStart;
  
@@ -57,7 +57,7 @@
  
 }
  
-        searchNumber(1 , 10);
+        searchNumber(1 , 100);
     </script>
 
     <title>Document</title>
