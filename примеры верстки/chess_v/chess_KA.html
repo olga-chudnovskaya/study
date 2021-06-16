@@ -4,36 +4,42 @@
 		<meta charset="utf-8">
 		<title>Сhessboard</title>
 		<style>	
-        	* {
+            <style>
+            * {
                 padding: 0;
                 margin: 0;
-            }           
-			table { 
-				margin: auto;
-                border: medium solid #69471a;
-                background: #9e9889;
-                border-spacing: 0;
-				border-collapse: collapse; 				
             }
-            
-            td { 
-                border: thin solid #69471a;
-                font-size: 2em;
+            table {
+                margin: 50px auto;
             }
-		    th, td { 
-				text-align: center;
-				width: 2em; 
-                height: 2em;
+            td, th {
+                height: 50px;
+                width: 50px;
                 box-sizing: border-box;
-                
+                border: 2px solid transparent;
+                text-align: center;
+                vertical-align: middle;
+                font: normal 20px/30px Arial;
+                position: relative;
             }
-			th {
-                background-color: #fffacd;
+            tr:nth-child(odd) td:nth-child(odd),
+            tr:nth-child(even) td:nth-child(even) {
+                background: #bbb;
+                border-color: #bbb;
             }
-            
-            tr:nth-child(even ) td:nth-child(odd), 
-            tr:nth-child(odd) td:nth-child(even) {
-                background:#69471a;
+            tr:nth-child(odd) td:nth-child(even),
+            tr:nth-child(even) td:nth-child(odd) {
+                background: #666;
+                border-color: #666;
+            }
+            td:after {
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                width: 50px;
+                display: block;
+                font-size: 30px;
+                line-height: 50px;
             }
             .white_king:after {
                 content: '♔';
@@ -83,58 +89,36 @@
                 content: '♟';
                 color: black;
             }
+            body.mouseup td.startpoint {
+                border-color: yellow;
+            }
+            body.mouseup td.endpoint {
+                border-color: blue;
+            }
 		</style>
 
         <script>
-let chessnames = ['king', 'queen', 'bishop', 'knight', 'rook', 'pawn'];
-let chesscolors = ['white', 'black'];
-let coords = [['a','b','c','d','e','f','g','h'], [1, 2, 3, 4, 5, 6, 7, 8]];
-        
-function kingspath(begin, end) {
-    let a = document.getElementById(begin);
-    let b = document.getElementById(end);
-    if (!check_cell(a, b)) {
-        alert('Так ходить нельзя!')
-        return;
+document.addEventListener('click', function(event){
+    console.log(event.target.tagName);
+    if ((!flag) || (event.target.tagName.toLowerCase() != 'td')) return;
+    if (counter) {
+        event.target.classList.add('startpoint');
+        document.body.classList.add('mouseup');
+    } else {
+        event.target.classList.add('endpoint');
+        flag = false;
+        setTimeout(function(){
+            document.querySelector('.mouseup').classList.remove('mouseup');
+            document.querySelector('.startpoint').classList.remove('startpoint');
+            document.querySelector('.endpoint').classList.remove('endpoint');
+            alert('Flag up!');
+            flag = true;
+        }, 5000);
     }
-    b.className = a.className;
-    a.className = '';
-}
-function check_cell(a, b) {
-    let name = a.className;
-    if (!name) return false;
-    let namearr = name.split('_');
-    if (!check_color(namearr[0])) return false;
-    if (!check_path(namearr, a, b)) return false;
-    return true;
-}
-function check_path(namearr, a, b) {
-    if (namearr[1] == 'king') {
-        pathes = [[-1,-1],[-1,0],[-1,1],[0,-1],[0,1],[1,-1],[1,0],[1,1]];
-    }
-    let begin_id = a.id;
-    let end_id = b.id;
-    let begin_idx1 = coords[0].findIndex(item => item == begin_id[0]);
-    let begin_idx2 = coords[1].findIndex(item => item == begin_id[1]);
-    let end_idx1 = coords[0].findIndex(item => item == end_id[0]);
-    let end_idx2 = coords[1].findIndex(item => item == end_id[1]);
-    for (path of pathes) {
-        if ((path[0] == begin_idx1 - end_idx1) && (path[1] == begin_idx2 - end_idx2)) {
-            if (check_aim(namearr, a, b)) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    }
-}
-function check_aim(namearr, a, b) {
-    if (b.className) return false;
-    return true;
-}
-function check_color(color) {
-    return true;
-}
+    counter = !counter;
+})
+let counter = true;
+let flag = true;
         </script>
 	</head>
 	<body>
