@@ -43,11 +43,11 @@ td:after {
     color: black;
 }
 .white_knight:after {
-    content: '♘';
+    content: '\2658';
     color: white;
 }
 .black_knight:after {
-    content: '♞';
+    content: '\265e';
     color: black;
 }
 body.mouseup td.startpoint {
