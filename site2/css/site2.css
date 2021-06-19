@@ -104,6 +104,9 @@ main {
 .main_top {  
 	background: url(../img/bg_cont.jpg) no-repeat;
 	background-size: 100%;
+	padding: 32px;
+	text-align: center;
+	min-height: 250px;
 }
 
 .main_bottom {
@@ -138,9 +141,12 @@ main {
 }
 .main_bottom_card div {
 	padding: 32px 0;
-	max-width: 437px;
+	max-width: 489px;
 }
 
+.main_bottom_card_img {
+	align-content: center;
+}
 form {
 	padding: 32px;
 	display: flex;
@@ -159,7 +165,7 @@ label {
 }
 input, textarea {
 	min-height: 72px;
-	min-width: 457px;
+	min-width: 432px;
 	box-sizing: border-box;
     padding: 16px;
     border: 1px solid #356EAD;
@@ -181,7 +187,7 @@ textarea {
 }
 
 form  button {
-	min-width: 457px;
+	min-width: 432px;
 	height: 72px;
     padding: 12px 20px;
     margin: 32px 0;
@@ -197,6 +203,7 @@ form  button {
 
 /* footer */
 footer {
+	margin-top: 32px;
 	background: #316099;
 	color: #fff;
 	line-height: 26px;
@@ -273,6 +280,9 @@ ol .container{
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
+
+}
+.contact p::before {
 
 }
 
