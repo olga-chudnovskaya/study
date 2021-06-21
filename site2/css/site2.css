@@ -91,6 +91,38 @@ header .container {
     
 }
 
+.switcher {
+	width: 80px;
+	height: 50px;
+	position: relative;
+}
+.switcher div {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	border-radius: 50%;
+	border: 2px solid #077;
+	box-sizing: border-box;
+	background: #077;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: auto;
+}
+.switcher div:first-child {
+	background: #fff;
+	z-index: 2;
+	left: auto;
+	right: 0;
+}
+.switcher.toggled div {
+	background: #fff;
+	z-index: 2;
+}
+.switcher.toggled div:first-child {
+	background: #077;
+	z-index: 1;
+}
 
 
 /*mine*/
@@ -136,11 +168,11 @@ main {
 }
 .main_bottom_card div {
 	padding: 32px 0;
-	max-width: 489px;
+	max-width: 473px;
 }
 
 .main_bottom_card_img {
-	text-align: center;
+	text-align: center ;
 }
 form {
 	padding: 32px;
@@ -191,6 +223,8 @@ form  button {
 
 
 .map {
+	width: 100%;
+	min-height: 400px;
 	margin: 32px 0;
 
 }
