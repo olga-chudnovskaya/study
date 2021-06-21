@@ -1,0 +1,5 @@
+https://itchief.ru/javascript/modal-window
+https://github.com/itchief/ui-components/blob/master/Modal/modal.css
+
+
+http://tradebenefit.ru/vsplyvajushhee-okno-jquery
