@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Game of jQuery</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	font-size: 26px;
+	color: #b5a167;
+	padding-top: 200px;
+	padding-left: 500px;
+	position: absolute;
+}
+.modal {
+	height: 150px;
+	width: 300px;
+ 	border: 1px solid #b5a167;
+ 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	background: #eae3a4;
+	text-align: center;
+}
+button {
+	width: 100px;
+ 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+</style>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    alert('Задание по JS с применением библиотеки jQuery!');
+setTimeout(function(){$('body').fadeOut('slow')}, 3000);
+
+//$('button').on('click', () => {
+//	$('p').fadeIn('slow');
+//});
+</script>
+    </head>
+    <body>
+		<div class="modal">
+			<p>Это задание по JS</p>
+			<button id="button">ok</button>
+		</div>
+    </body>
+</html>
