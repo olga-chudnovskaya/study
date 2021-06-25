@@ -1,8 +1,10 @@
 a{
+  text-decoration: none;
 	color: white;
+  
 }
 
-.popup_vk {
+.popup {
 	border: solid 1px black;
 	padding: 10px;
 	background-color: white;
@@ -11,14 +13,12 @@ a{
 }
 
 .border_radius_class {
-	border-radius: 10px;  
-	-moz-border-radius: 10px; 
-	-webkit-border-radius: 10px;  
+	border-radius: 10px;    
 }
 
 .btn_close {
     padding: 3%;
-    background-color: rgb(249, 72, 11);
+    background-color: #f9470b;
     margin-top: 5%;
     margin-bottom: 2%;
     text-align: center;
@@ -30,6 +30,8 @@ a{
 	width: 30%;
 }
 
-#vk_groups_popup {
+#groups_popup {
+  width: 300px;
+  height: 150px;
 	margin: 0 auto;
 }

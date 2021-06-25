@@ -1,5 +1,5 @@
 $(function () {
-  $('#callback-button').click(function (e) {
+  $('#open-button').click(function (e) {
     e.preventDefault();
     $('.modal').addClass('modal_active');
     $('body').addClass('hidden');
