@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>zagadkaiotvet</title>
+<script>
+/*
+* Создаем объект "Игра в загадки" с методом "Загадать" и массивом объектов "Загадка".
+* Объект "Загадка" имеет свойства "Загадка" и "Отгадка".
+* Свойство "Загадка" - строка.
+* Свойство "Отгадка" - массив строк.
+* Метод "Загадать" сначала сообщает, сколько всего загадок (свойство массива "Массив загадок" length), 
+* а потом циклом for ... of перебирает массив, загадывая каждую загадку,
+* потом сообщает, что игра окончена.
+* По желанию, можно сделать счетчик правильных ответов.
+*/
+
+	let igravzagadki = {
+		zagadat: function() {
+			alert( 'Сейчас я загадаю ' + this.zagadki.length + ' загадки' );
+			let e = 0;
+			for(let z of this.zagadki) {
+				let answer = prompt(z.zagadka).toLowerCase() ;
+				let verno = false;
+				for(let o of z.otgadka) {
+					if ( o == answer ) {
+						verno = true;
+						e++;
+						break;
+					}	
+				}
+				if ( verno == true)
+					alert( 'Правильно' );
+				else {
+					alert( 'Неправильно' );
+				}
+				alert(e);
+				alert( 'Игра окончена!' );
+				}
+		},
+		zagadki: [
+			{
+				zagadka: 'Висит груша, нельзя скушать',
+				otgadka: [ 'лампочка', 'груша', 'скушать']
+			}, 
+			{
+				zagadka: 'Без окон, без дверей полна горница людей',
+				otgadka: [ 'огурец', 'помидор']
+			}, 
+			{
+				zagadka: 'Сколько будет 2+2?',
+				otgadka: ['4']
+			}
+		]
+	};
+	igravzagadki.zagadat();
+	
+</script>
+</head>
+<body></body>
+</html>

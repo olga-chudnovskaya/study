@@ -1,0 +1,179 @@
+body {
+    color: #FFFFFF;
+    font-family: Montserrat,sans-serif;
+font-style: normal;            
+}
+
+a {
+text-decoration: none;    
+}
+
+header {
+position: absolute;
+width: 1716px;
+height: 45px;
+left: 102px;
+top: 22px;
+
+z-index: 99;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+margin: 15px;
+}
+
+.nav a { 
+display: inline-block;
+color: #ffffff;
+
+
+font-size: 20px;       
+text-transform: uppercase;
+} 
+
+.btn_red {
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 11px 34px;
+
+background: #FF4945;
+border-radius: 7px;
+}
+.btn_red a{
+font-weight: bold;
+line-height: 157%;
+
+text-align: center;
+letter-spacing: 0.05em;
+}
+
+.cont a, .lang a{        
+text-transform: none;        
+}
+
+.menu {
+position: absolute;
+width: 293px;
+height: 19px;
+left: 102px;
+top: 122px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 157%;
+/* identical to box height, or 19px */
+
+
+color: #FFFFFF;
+
+opacity: 0.7;
+}
+
+.rol {
+position: absolute;
+width: 173px;
+height: 22px;
+left: 102px;
+top: 508px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 157%;
+/* identical to box height, or 22px */
+
+text-align: center;
+letter-spacing: 0.5em;
+
+color: #FFFFFF;
+
+opacity: 0.5;
+transform: rotate(-90deg);
+}
+.mine {
+position: absolute;
+width: 1920px;
+height: 950px;
+left: 0px;
+top: 0px;
+background-image: url(../img/bg_roller_supp.png);
+background-repeat: no-repeat;
+}
+
+.info{
+position: absolute;
+display: flex;
+flex-direction: column;
+width: 746px;
+height: 261px;
+left: 260px;
+top: 313px;
+
+}
+
+h1 {
+font-family: Impact;
+font-style: normal;
+font-weight: normal;
+font-size: 90px;
+line-height: 127%;
+
+
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+.i1 {
+display: flex;
+}
+
+.i2 {
+font-weight: 500;
+font-size: 22px;
+line-height: 157%;
+}
+.orange{
+width: 19px;
+height: 19px;
+                        
+background: #FFB048;
+border-radius: 3px;
+}
+
+
+.dark {
+position: absolute;
+width: 210px;
+height: 950px;
+left: 1710px;
+top: 0px;
+
+background: #162031;
+opacity: 0.7;
+}
+
+.konv{
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 157%;
+/* identical to box height, or 22px */
+
+text-align: center;
+letter-spacing: 0.5em;
+
+color: #FFFFFF;
+
+opacity: 0.5;
+transform: rotate(-90deg);
+}

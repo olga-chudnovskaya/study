@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+// Массив с загадками
+let riddles = [
+  [
+    "Музыкант, певец, рассказчик — а всего труба да ящик", // Загадка
+    ["граммофон", "Граммофон"] // Правильные ответы
+  ],
+  [
+    "Страну чудес откроем мы и встретимся с героями в строчках, на листочках, где станции на точках",
+    ["книга", "Книга", "книжка", "Книжка"]
+  ],
+  [
+    "Речка спятила с ума — по домам пошла сама",
+    ["водопровод", "Водопровод"]
+  ]
+]
+
+let name = prompt('Как тебя зовут?',);
+alert(`Привет, ${name}!`);
+alert( 'Поиграем в загадки?' );
+
+
+function getAnswer(riddle) {
+  return prompt(riddle[0]);
+}
+ 
+function isValidAnswer(riddle, answer) {
+  for (var i = 0; i < riddle[1].length; i++) {
+    if (riddle[1][i] == answer) return true;
+  }
+ 
+  return false;
+}
+ 
+alert("Отгадай загадки.");
+ 
+// Количество правильных ответов
+var validAnswers = 0;
+ 
+for (var i = 0; i < riddles.length; i++) {
+  var answer = getAnswer(riddles[i]);
+ 
+  if (isValidAnswer(riddles[i], answer)) {
+    validAnswers++;
+    alert("Поздравляем, вы угадали!");
+  } else {
+    alert("Вы не угадали!");
+  }
+}
+ 
+alert("Правильных ответов: " + validAnswers);;
+</script>
+</head>
+<body></body>
+</html>
