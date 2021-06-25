@@ -1,58 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>IfThenElse</title>
-		<script>
-		const WORD1 = 'пингвин';
-		const WORD2 = 'коз';
-		const WORD3 = 'озер';
-		const WORD4 = 'мурав';
+		<title>#</title>
+		<style type="text/css">
 		
-		const POSTFIX1 = ['ов', 'а', ''];
-		const POSTFIX2 = ['', 'ы', 'а'];
-		const POSTFIX3 = ['', 'а', 'о'];
-		const POSTFIX4 = ['ёв', 'ья', 'ей'];
-		let num;
-
-		function tchislitelnoe(i, word, post) {
-		let ctrl = i % 100;
-		let point = 0;
-		if ((ctrl % 10 == 1) && (ctrl != 11)) {
-		point = 2;
-		} else if ((ctrl % 10 == 2) && (ctrl != 12)) {
-		point = 1;
-		} else if ((ctrl % 10 == 3) && (ctrl != 13)) {
-		point = 1;
-		} else if ((ctrl % 10 == 4) && (ctrl != 14)) {
-		point = 1;
-		}
-		return (i + ' ' + word + post[point]);
-		}
-
-		 do {
-		num = prompt('Введите число');
-		} while (isNaN(parseInt(num)));
-
-		alert(tchislitelnoe(num, WORD1, POSTFIX1));
-
-		do {
-		num = prompt('Введите число');
-		} while (isNaN(parseInt(num)));
-
-		alert(tchislitelnoe(num, WORD2, POSTFIX2));
-
-		do {
-		num = prompt('Введите число');
-		} while (isNaN(parseInt(num)));
-
-		alert(tchislitelnoe(num, WORD3, POSTFIX3));
-		do {
-		num = prompt('Введите число');
-		} while (isNaN(parseInt(num)));
-
-		alert(tchislitelnoe(num, WORD4, POSTFIX4));
-		</script>
+		</style>
 	</head>
-	<body></body>
+	<body>
+		<div class="filter-block__item">
+			<label class="filter-block__label">Роль</label>
+			<div class="custom-select" data-selectprefix="common_type">
+				<span class="fakelink custom-select__opener" data-selectline="" style="min-width: 0px;">Все</span>
+				<div class="custom-select__drop" style="min-width: 0px;">
+				<button type="button" class="custom-select__link" data-selectline="all">Все</button>
+				<button type="button" class="custom-select__link" data-selectline="0">Истец</button>
+				<button type="button" class="custom-select__link" data-selectline="1">Ответчик</button>
+				<button type="button" class="custom-select__link" data-selectline="2">Третье лицо</button>
+				<button type="button" class="custom-select__link" data-selectline="3">Иное лицо</button>
+			</div>
+			</div>
+		</div>
+		<div>
+			
+		</div>
+	</body>
 </html>

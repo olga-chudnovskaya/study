@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Позиционирование</title>
+		<style>
+            * {
+					margin: 0;
+					padding: 0;
+			}
+            .wrapper {
+                    min-height: 300vh;
+					display: flex;
+					flex-direction: row;
+			}
+            section {
+                width: 50%;
+            }
+            .left {
+                background: coral;
+            } 
+            .right {
+                background: aquamarine;
+            } 
+             .txt {
+                position: absolute;
+                right: 20%;
+                top: 80%;
+                width: 75%;
+                padding: 20px;
+                border-style: solid;;
+				border-width: 10px;
+                border-color: cyan;
+                z-index: 99;
+            }
+            .circle {
+                
+                position: fixed;
+                bottom: calc(50vh - 50px);
+                left: 60%;
+                width: 200px;
+                height: 200px;
+                background: plum;
+                border-radius: 50%
+            }
+        </style>
+    </head>
+<body>
+
+    <div class="wrapper">
+
+        <section class="left">
+            <div class="txt">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas labore in eaque dolorem error ex tempore nihil at ab incidunt commodi molestias, quidem soluta eligendi, cupiditate, sed exercitationem non magni? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas labore in eaque dolorem error ex tempore nihil at ab incidunt commodi molestias, quidem soluta eligendi, cupiditate, sed exercitationem non magni? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas labore in eaque dolorem error ex tempore nihil at ab incidunt commodi molestias, quidem soluta eligendi, cupiditate, sed exercitationem non magni? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas labore in eaque dolorem error ex tempore nihil at ab incidunt commodi molestias, quidem soluta eligendi, cupiditate, sed exercitationem non magni?  sit amet consectetur, adipisicing elit. Voluptas labore in eaque dolorem error ex tempore nihil at ab incidunt commodi molestias, quidem soluta eligendi, cupiditate, sed exercitationem non magni? 
+				</p>
+            </div>
+        </section>
+        
+        <section class="right">
+
+            <div class="circle"></div>
+
+        </section>
+
+</body>
+</html>

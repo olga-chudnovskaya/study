@@ -1,0 +1,116 @@
+              
+              <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Базовые методы jQuery для отображения и скрытия элементов</title>
+    <!-- Bootstrap -->
+    <link href="/examples/vendors/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .progress-bar {
+            -webkit-transition: width .2s ease;
+            -moz-transition: width .2s ease;
+            -o-transition: width .2s ease;
+            -ms-transition: width .2s ease;
+            transition: width .2s ease;
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="h3 page-header text-center">Базовые методы jQuery для отображения и скрытия элементов</h1>
+<div style="text-align:center; margin: 10px 0">
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+</div>
+<div style="text-align:center; margin: 10px 0">
+    <button id="fadein">fadeIn</button>
+    <button id="fadeout">fadeOut</button>
+    <button id="fadetoggle">fadeToggle</button>
+    <button id="fadeto2">fadeTo 0</button>
+    <button id="fadeto">fadeTo 0.5</button>
+    <button id="fadeto1">fadeTo 1</button>
+</div>
+<div style="text-align:center; margin: 10px 0">
+    <button id="slidedown">slideDown</button>
+    <button id="slideup">slideUp</button>
+    <button id="slidetoggle">slideToggle</button>
+</div>
+
+<div class="progress center-block" style="width: 30%">
+    <div id="progress" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+         style="width: 0%;">
+        60%
+    </div>
+</div>
+
+<div style="width: 50%; margin: 10px auto;">
+    <div id="block" style="height: 200px; background: pink;">
+    </div>
+
+    <!-- jQuery -->
+    <script src="/examples/vendors/jquery/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/examples/vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+            parameters = {
+                duration: 3000,
+                progress: function (animation, progress) {
+                    $('#progress')
+                        .width(parseInt(progress * 100) + '%')
+                        .text(parseInt(progress * 100) + '%');
+                },
+                complete: function () {
+                    $('#progress')
+                        .css('width', '0%')
+                        .text('0%');
+                }
+            }
+            $('#show').click(function () {
+                $('#block').show(parameters);
+            });
+            $('#hide').click(function () {
+                $('#block').hide(parameters);
+            });
+            $('#toggle').click(function () {
+                $('#block').toggle(parameters);
+            });
+            $('#fadein').click(function () {
+                $('#block').fadeIn(parameters);
+            });
+            $('#fadeout').click(function () {
+                $('#block').fadeOut(parameters);
+            });
+            $('#fadetoggle').click(function () {
+                $('#block').fadeToggle(parameters);
+            });
+            $('#fadeto').click(function () {
+                $('#block').fadeTo(parameters, 0.5);
+            });
+            $('#fadeto1').click(function () {
+                $('#block').fadeTo(parameters, 1);
+            });
+            $('#fadeto2').click(function () {
+                $('#block').fadeTo(parameters, 0);
+            });
+            $('#slideup').click(function () {
+                $('#block').slideUp(parameters);
+            });
+            $('#slidedown').click(function () {
+                $('#block').slideDown(parameters);
+            });
+            $('#slidetoggle').click(function () {
+                $('#block').slideToggle(parameters);
+            });
+        });
+    </script>
+
+
+</body>
+</html>							
+						

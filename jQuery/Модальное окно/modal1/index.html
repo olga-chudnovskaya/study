@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	  <title>Модальное окно DEMO</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta name="description" content="Демо урок: Модальное окно">
+	  <meta name="keywords" content="modal windows jquery, demo">
+      <meta name="author" content="FRUCTCODE.COM">
+	  
+	  <link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+
+	<h1>Создание модального окна с помощью библиотеки jQuery</h1>
+		<div class="btn_group">
+			<a href="#" onclick="bopen();"><span class="btn_close border_radius_class">Вызвать модальное окно</span></a> <br>
+			<a href="https://fructcode.com/ru/blog/how-to-create-modal-window-with-jquery/"><span class="btn_close border_radius_class">Прочитать статью на сайте FructCode</span></a>
+		</div>
+
+		<div id="popup" style="display: none;">
+			<div class="popup border_radius_class"> 
+				<div> 
+					<h3>Модальное окно<h3>
+				</div>
+		
+				<div id="groups_popup"></div>
+
+				<a href="#" onclick="bclose();"> 
+					<span class="btn_close border_radius_class">
+						закрыть
+					</span>
+				</a>
+
+			</div>
+
+		</div>
+
+	</body>
+
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="jquery.bpopup.js"></script>
+	<script src="main.js"></script>
+	
+
+</html>
