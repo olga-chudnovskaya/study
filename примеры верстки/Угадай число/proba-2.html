@@ -16,13 +16,34 @@
 */
 
 /* описываем функции */
-function getRandomInt1_100() {
-return Math.floor(Math.random() * 100) + 1;
-}
-function game(){
-//...
-}
 
+function getRandomInt1_10() 
+{
+  return Math.floor(Math.random() * 10) + 1;
+}
+let num = getRandomInt1_10();
+function game(){
+    while (
+            do {
+            let ans = +prompt("Введи число",); 
+            } while (isNaN(parseInt(ans)));
+    ) {
+		alert("Это не то. Задай число");
+	}
+	
+    let counter = 0;	
+		do {
+			if (ans < num) {
+				alert('Маловато будет!');
+			} else if (ans > num) {
+				alert('Перебор');
+			} else {
+				alert('Ответ правильный!');
+			}
+			counter++; 
+		} while (!ans == num);
+		alert(counter);
+}
 
 /* начинаем действовать */
 alert('Привет! Угадай число');
@@ -30,10 +51,12 @@ let soglasie = confirm("Согласен?");
 if (soglasie) {
 do {
 game();
+
 soglasie = confirm("Сыграем еще раз?");
 } while (soglasie);
 }
 alert('До свидания!');
+
 </script>
 </head>
 <body></body>

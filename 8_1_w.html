@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <script>
@@ -19,9 +19,9 @@ let riddles = [
   ]
 ]
 
-let name = prompt('Как тебя зовут?',);
+let name = prompt('Как тебя зовут?',);//Выводит сообщение с запросом имени и полем ввода
 alert(`Привет, ${name}!`);
-alert( 'Поиграем в загадки?' );
+alert( 'Отгадай ' + riddles.length + ' загадки');
 
 
 function getAnswer(riddle) {
@@ -29,30 +29,32 @@ function getAnswer(riddle) {
 }
  
 function isValidAnswer(riddle, answer) {
-  for (var i = 0; i < riddle[1].length; i++) {
+  for (let i = 0; i < riddle[1].length; i++) {
     if (riddle[1][i] == answer) return true;
   }
  
   return false;
 }
- 
-alert("Отгадай загадки.");
- 
+  
 // Количество правильных ответов
-var validAnswers = 0;
+let counter = 0;
  
-for (var i = 0; i < riddles.length; i++) {
-  var answer = getAnswer(riddles[i]);
+for (let i = 0; i < riddles.length; i++) {
+  let answer = getAnswer(riddles[i]);
  
   if (isValidAnswer(riddles[i], answer)) {
-    validAnswers++;
+    counter++;
     alert("Поздравляем, вы угадали!");
   } else {
     alert("Вы не угадали!");
   }
 }
  
-alert("Правильных ответов: " + validAnswers);;
+alert("Правильных ответов: " + counter);
+
+
+alert('Игра окончена!');
+
 </script>
 </head>
 <body></body>

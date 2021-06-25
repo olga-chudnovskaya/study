@@ -14,11 +14,11 @@
 * потом сообщает, что игра окончена.
 * По желанию, можно сделать счетчик правильных ответов.
 */
-
+	let e = 0;
 	let igravzagadki = {
 		zagadat: function() {
-			alert( 'Сейчас я загадаю ' + this.zagadki.length + ' загадки' );
-			let e = 0;
+			alert( 'Привет! Сейчас я загадаю ' + this.zagadki.length + ' загадки' );
+			
 			for(let z of this.zagadki) {
 				let answer = prompt(z.zagadka).toLowerCase() ;
 				let verno = false;
@@ -29,15 +29,16 @@
 						break;
 					}	
 				}
-				if ( verno == true)
+				if (verno == true)
 					alert( 'Правильно' );
 				else {
 					alert( 'Неправильно' );
 				}
-				alert(e);
-				alert( 'Игра окончена!' );
+				
+				
 				}
 		},
+		
 		zagadki: [
 			{
 				zagadka: 'Висит груша, нельзя скушать',
@@ -54,7 +55,8 @@
 		]
 	};
 	igravzagadki.zagadat();
-	
+	alert('Правильных ответов ' + e);
+	alert( 'Игра окончена!' );
 </script>
 </head>
 <body></body>

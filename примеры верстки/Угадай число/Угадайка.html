@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="utf-8">
+		<title>Угадай число</title>
+		<script>
+        function getRandomInt1_100() {
+return Math.floor(Math.random() * 100) + 1;
+}
+let counter1 = 0;
+function game(){
+	let rul = getRandomInt1_100();
+	let chislo = prompt("Введите число от 1 до 100:");
+    if (isFinite(chislo) === false) {
+    do {
+    chislo = prompt("Вы ввели не число. Введите число от 1 до 100:")
+    } while (isFinite(chislo) === true);
+      ;
+    }
+    		if (chislo == rul) {
+              counter1++;
+              alert ("Вы угадали число с " + counter1 + " попытки!")
+			}
+    		else if (chislo > rul){
+    		alert ("Ваше число больше")
+            counter1++;
+    		}
+   		 	else if (chislo < rul){
+    		alert ("Ваше число меньше")
+            counter1++;
+    		}  
+}
+/* начинаем действовать */
+alert("Привет! Сейчас мы сыграем в 'Угадай число'");
+let soglasie = confirm("Согласен?");
+if (soglasie) {
+do {
+game();
+soglasie = confirm("Сыграем еще раз?");
+} while (soglasie);
+}
+alert("До свидания! Спасибо за игру!");
+		</script>
+	<head>
+	<body>
+	</body>
+</html> 

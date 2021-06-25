@@ -19,49 +19,53 @@
 function getRandomInt1_100() {
 return Math.floor(Math.random() * 100) + 1;
 }
-function game(){
-    cycleStart: while( true ) {
-        let userNumber =  prompt(`Введите число от 1 до 100`);
-            if (isNaN(userNumber))
-                alert("Введите число ещё раз!");
+let chislo;
+let a = getRandomInt1_100();
+let i;
 
-            else if (userNumber > getRandomInt1_100)
-                alert("Меньше!");
-
-            else if (userNumber < getRandomInt1_100)
-                alert("Больше!");
-
-            else if (userNumber == getRandomInt1_100) {
-                alert("Правильно!");
-
-                if(confirm(`Продолжить игру?`)) {
-                    getRandomInt1_100()
-                     
-                    }
-                else {
-                    break;
-                }
-            }
-    }
-}
-
+function game(){ 
+if (a==chislo) {
+      alert ('ваше число совпадает! Поздравляем, вы угадали!'); 
+   
+               } else { if (chislo < a)  { alert ('Вы не угадали( ваше число меньше загаданного');
+                                       } else {
+							             if (chislo > a) alert ('Вы не угадали( ваше число больше загаданного');
+							                  }
+                      }
 //...
+                }
 
 
-/* начинаем действовать */
-alert('Привет! Угадай число');
-let soglasie = confirm("Согласен?");
-if (soglasie) {
-do {
-game();
-/*soglasie = confirm("Сыграем еще раз?");
-} while (soglasie);*/
+
+/*while (true) {
+  let value = +prompt("Введите число", '');
+  if (!value) break; // (*)
+  sum += value;
 }
+alert( 'Сумма: ' + sum );
+/* начинаем действовать */
+//alert('Привет! Угадай число');
+let soglasie = confirm("Привет! Угадай число, cогласен?");
+if (soglasie) {
+do {chislo = prompt('тогда угадай число');
+   while(isNaN(chislo) == true) {chislo = prompt('вы ввели не число, повторите ввод');   
+    }
+ {alert ('Вы ввели числовое значение, сейчас вы узнаете угадали ли вы число!'); 
+ 
+ alert ('Машина загадала число: ' + a);
+ alert ("Вы загадали число:  " + chislo);
+  i=0;
+    game();
+    soglasie = confirm("Сыграем еще раз?");}
+
+
+
+ i++;
+ alert('вы угадали через' + i + 'раз');
+} while (soglasie);
 alert('До свидания!');
-
+}
 </script>
-
-
 </head>
 <body></body>
 </html>

@@ -25,8 +25,7 @@ function check_path(a, b) {
         pathes = [[-1,-1],[-1,0],[-1,1],[0,-1],[0,1],[1,-1],[1,0],[1,1]];
     } else if (save_class == 'white_knight' || save_class == 'black_knight') {
         pathes = [[-2,-1],[-2,1],[2,-1],[2,1],[-1,-2],[-1,2],[1,-2],[1,2]];
-    } lse if (save_class == 'white_knight' || save_class == 'black_knight') {
-        pathes = [[-2,-1],[-2,1],[2,-1],[2,1],[-1,-2],[-1,2],[1,-2],[1,2]];
+
     }
     let begin_idx1 = coords[0].findIndex(item => item == a.id[0]);
     let begin_idx2 = a.id[1];
